@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "东旅记 · 地图与随行讲解",
+  "short_name": "东旅记",
+  "description": "查看地图、了解地方历史，并保存自己的旅行档案。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8faf7",
+  "theme_color": "#245e40",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
