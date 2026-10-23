@@ -1,6 +1,6 @@
 'use strict';
-const CACHE='donglvji-static-731000a2c20f2904';
-const ASSETS=["./.nojekyll","./apple-touch-icon.png","./assets/ai-DYXrRqnd.js","./assets/index-CVo4NMc3.css","./assets/index-iYcs348f.js","./assets/location-DIWstg6C.js","./assets/maplibre-COvwXmyv.js","./assets/maplibre-gl-worker-DJoMIXcx.js","./assets/placeServices-D726tdRW.js","./assets/react-BpaniaUk.js","./assets/storage-BsjoTzx9.js","./icon-192.png","./icon-512.png","./icon-maskable.png","./icon.svg","./index.html","./manifest.webmanifest"];
+const CACHE='donglvji-static-485a5ef27b67584d';
+const ASSETS=["./.nojekyll","./apple-touch-icon.png","./assets/ai-CipXQKhK.js","./assets/index-CVo4NMc3.css","./assets/index-Dl4XiU_Z.js","./assets/location-Bl2k29mi.js","./assets/maplibre-COvwXmyv.js","./assets/maplibre-gl-worker-DJoMIXcx.js","./assets/placeServices-BQibPmAI.js","./assets/react-BpaniaUk.js","./assets/storage-Ck5zNzrA.js","./icon-192.png","./icon-512.png","./icon-maskable.png","./icon.svg","./index.html","./manifest.webmanifest"];
 const known=new Set(ASSETS.map(p=>new URL(p,self.location.href).href));
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS.map(p=>new Request(p,{cache:'reload'}))))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('donglvji-static-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
