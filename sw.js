@@ -1,6 +1,6 @@
 'use strict';
-const CACHE='donglvji-static-7c4bff7f8c330f80';
-const ASSETS=["./.nojekyll","./apple-touch-icon.png","./assets/ai-DGDCAx-g.js","./assets/index-Ba2i75nA.css","./assets/index-DgAjhg06.js","./assets/index-wB10bs2e.js","./assets/location-CVIkR9rH.js","./assets/maplibre-COvwXmyv.js","./assets/maplibre-gl-worker-DJoMIXcx.js","./assets/mespeak_config-BrFTMR1a.js","./assets/placeServices-B83huDFY.js","./assets/react-DHz4kLit.js","./assets/storage-uMJsv50a.js","./assets/zh-CRXa83Zj.js","./assets/zh-yue-CVyyBuDo.js","./icon-192.png","./icon-512.png","./icon-maskable.png","./icon.svg","./index.html","./manifest.webmanifest"];
+const CACHE='donglvji-static-3c174e6231971c58';
+const ASSETS=["./.nojekyll","./apple-touch-icon.png","./assets/ai-B64CLLRS.js","./assets/index-BJO1tjrJ.js","./assets/index-DFtMj6v9.css","./assets/location-Bi4ui1Rj.js","./assets/maplibre-AgMWWGR8.css","./assets/maplibre-DC9zF467.js","./assets/maplibre-gl-worker-DJoMIXcx.js","./assets/placeServices-BxR7b-w1.js","./assets/react-C_JW_Gx2.js","./assets/storage-DoatIJlQ.js","./icon-192.png","./icon-512.png","./icon-maskable.png","./icon.svg","./index.html","./manifest.webmanifest","./mobile.html"];
 const known=new Set(ASSETS.map(p=>new URL(p,self.location.href).href));
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS.map(p=>new Request(p,{cache:'reload'}))))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('donglvji-static-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

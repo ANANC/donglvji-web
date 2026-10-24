@@ -6,15 +6,40 @@
     <meta name="theme-color" content="#1555a0" />
     <meta name="description" content="沿着地图，发现街巷里的历史、人文与好味道。" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="东旅记" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" type="image/svg+xml" href="./icon.svg" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <title>东旅记 · 地图与随行讲解</title>
-    <script type="module" crossorigin src="./assets/index-wB10bs2e.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/react-DHz4kLit.js">
-    <link rel="modulepreload" crossorigin href="./assets/maplibre-COvwXmyv.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-Ba2i75nA.css">
+    <style>
+      #boot-loader{position:fixed;inset:0;z-index:2147483000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#fff;color:#17334c;font:16px/1.5 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+      #boot-loader strong{font-size:24px;letter-spacing:.08em;color:#1555a0}
+      #boot-loader span{font-size:15px;color:#62768c}
+      #boot-loader .boot-track{width:min(280px,72vw);height:8px;border-radius:999px;overflow:hidden;background:#dce8f4}
+      #boot-loader .boot-track>i{display:block;height:100%;width:0;border-radius:inherit;background:#1555a0;animation:boot-progress 8s cubic-bezier(.2,.7,.2,1) forwards}
+      @keyframes boot-progress{0%{width:6%}20%{width:32%}55%{width:64%}100%{width:92%}}
+      @media(prefers-reduced-motion:reduce){#boot-loader .boot-track>i{animation:none;width:70%}}
+    </style>
+    <script>
+      (function () {
+        try {
+          var params = new URLSearchParams(location.search);
+          var shared = new URLSearchParams(location.hash.replace(/^#/, '')).has('share');
+          if (window.matchMedia('(min-width:900px)').matches && !params.has('embed') && !shared) {
+            location.replace('./mobile.html' + location.search + location.hash);
+          }
+        } catch (error) { /* The app still works without the desktop wrapper. */ }
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-BJO1tjrJ.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/react-C_JW_Gx2.js">
+    <link rel="modulepreload" crossorigin href="./assets/maplibre-DC9zF467.js">
+    <link rel="stylesheet" crossorigin href="./assets/maplibre-AgMWWGR8.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-DFtMj6v9.css">
   </head>
-  <body><div id="root"></div></body>
+  <body>
+    <div id="boot-loader" role="status" aria-live="polite"><strong>东旅记</strong><span>正在加载地图与足迹…</span><div class="boot-track"><i></i></div></div>
+    <div id="root"></div>
+  </body>
 </html>
